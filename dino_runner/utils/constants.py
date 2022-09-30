@@ -71,7 +71,9 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 GO = pygame.image.load(os.path.join(IMG_DIR, 'Other/GameOver.png'))
 
-HG = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+DEAD = pygame.image.load(os.path.join(IMG_DIR, 'Dino/DinoDead.png'))
+
+STOPWATCH = pygame.image.load(os.path.join(IMG_DIR, 'Other/Stopwatch.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"

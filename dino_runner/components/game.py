@@ -1,6 +1,6 @@
 import pygame
 
-from dino_runner.utils.constants import TITLE, ICON, GO, SCREEN_WIDTH, SCREEN_HEIGHT, BG, FPS, DEFAULT_TYPE
+from dino_runner.utils.constants import DEAD, TITLE, ICON, GO, SCREEN_WIDTH, SCREEN_HEIGHT, BG, FPS, DEFAULT_TYPE
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
@@ -66,6 +66,7 @@ class Game:
             self.game_speed += 1
 
         self.text_feat(22, f"Score: {self.score}", 1000, 50)
+        self.text_feat(22, f"Death: {self.death_count}", 70 , 50)
 
     def draw(self):
         self.clock.tick(FPS)
@@ -125,8 +126,8 @@ class Game:
         else:
             self.text_feat(20, "Press any key to restart", half_screen_width, half_screen_height + 20)
             self.text_feat(15, f"Death Count: {self.death_count}", half_screen_width, half_screen_height + 70)
-            self.text_feat(33, (f"Score: {self.score}"),half_screen_width, half_screen_height - 160)
-            self.screen.blit(ICON,(half_screen_width - 36, half_screen_height - 150))
+            self.text_feat(33, (f"Score: {self.score}"),half_screen_width, half_screen_height - 170)
+            self.screen.blit(DEAD,(half_screen_width - 36, half_screen_height - 150))
             self.screen.blit(GO,(half_screen_width - 190, half_screen_height - 50))
             
             self.game_speed = 20

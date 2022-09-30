@@ -15,7 +15,7 @@ class Obstacle(Sprite):
     def update(self, game_speed, obstacles):
         if self.bird == 'bird':
             self.bird_fly()
-        if self.step_index >= 10:
+        if self.step_index >= 9:
             self.step_index = 0
         if self.rect.x < -self.rect.width:
             obstacles.pop()
