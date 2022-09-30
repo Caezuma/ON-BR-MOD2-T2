@@ -1,4 +1,3 @@
-from unittest.mock import DEFAULT
 import pygame
 
 from dino_runner.utils.constants import TITLE, ICON, GO, SCREEN_WIDTH, SCREEN_HEIGHT, BG, FPS, DEFAULT_TYPE
@@ -7,6 +6,7 @@ from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
 
 PRIMARY_FONT_STYLE = "freesansbold.ttf"
+
 
 class Game:
     def __init__(self):
@@ -62,8 +62,8 @@ class Game:
         self.score += 1
 
         self.score // 100 % 10
-        if self.score % 150 == 0:
-            self.game_speed += 2
+        if self.score % 100 == 0:
+            self.game_speed += 1
 
         self.text_feat(22, f"Score: {self.score}", 1000, 50)
 
